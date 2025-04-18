@@ -50,3 +50,24 @@ th {
   background-color: #333;
   color: white;
 }
+
+#champions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+#champions-table th, #champions-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+#champions-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+#champions-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#champions-table tr:hover {
+  background-color: #f5f5f5;
+}
