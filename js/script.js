@@ -1,7 +1,7 @@
-// Datos de circuitos (puedes agregar más circuitos aquí)
+/// Datos de los circuitos (agrega más circuitos aquí si quieres)
 const circuitData = {
   'Saudi Arabian Grand Prix': {
-    image: 'images/jeddah_corniche_circuit.png', // Nueva ruta
+    image: 'images/jeddah_corniche_circuit.png', // Imagen local (sube esta imagen al repositorio)
     details: {
       length: '6.174 km',
       creation: '2021',
@@ -15,11 +15,11 @@ const circuitData = {
       { year: 2024, winner: 'Max Verstappen (Red Bull)', pole: 'Max Verstappen' }
     ]
   }
-
-  // Agrega más circuitos aquí, por ejemplo:
-  // 'Japanese Grand Prix': { image: '...', details: {...}, history: [...] }
+  // Puedes agregar más circuitos, por ejemplo:
+  // 'Japanese Grand Prix': { image: 'images/suzuka_circuit.png', details: {...}, history: [...] }
 };
 
+// Función para actualizar el temporizador y la sección del circuito
 function updateCountdown() {
   fetch('https://api.jolpi.ca/ergast/f1/2025.json')
     .then(response => {
@@ -29,12 +29,16 @@ function updateCountdown() {
       return response.json();
     })
     .then(data => {
+      // Validar la estructura de los datos de la API
       if (!data || !data.MRData || !data.MRData.RaceTable || !Array.isArray(data.MRData.RaceTable.Races)) {
         throw new Error('Datos de carreras no encontrados o no válidos');
       }
+
       const races = data.MRData.RaceTable.Races;
       const now = new Date();
       let nextRace = null;
+
+      // Encontrar la próxima carrera
       for (let race of races) {
         if (!race.date || !race.time) {
           console.warn('Carrera sin fecha o hora:', race);
@@ -50,7 +54,10 @@ function updateCountdown() {
           break;
         }
       }
+
+      // Actualizar el temporizador y la sección del circuito
       if (nextRace) {
+        // Calcular tiempo restante
         const raceDate = new Date(`${nextRace.date}T${nextRace.time}`);
         const diff = raceDate - now;
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -58,13 +65,24 @@ function updateCountdown() {
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         document.getElementById('countdown').innerText = 
           `Faltan ${days} días, ${hours} horas y ${minutes} minutos para ${nextRace.raceName}`;
+
         // Actualizar datos del circuito
         document.getElementById('race-name').innerText = nextRace.raceName;
+
         if (circuitData[nextRace.raceName]) {
           const circuit = circuitData[nextRace.raceName];
-          // Imagen del circuito
-          document.getElementById('circuit-image').src = circuit.image;
-          // Detalles del circuito
+
+          // Cargar la imagen del circuito
+          const imgElement = document.getElementById('circuit-image');
+          imgElement.src = circuit.image;
+          imgElement.alt = `Mapa del circuito - ${nextRace.raceName}`;
+          imgElement.onerror = () => {
+            console.error('Error al cargar la imagen del circuito:', circuit.image);
+            imgElement.src = '';
+            imgElement.alt = 'Imagen no disponible';
+          };
+
+          // Mostrar detalles del circuito
           let detailsHtml = `
             <p><strong>Longitud:</strong> ${circuit.details.length}</p>
             <p><strong>Fecha de creación:</strong> ${circuit.details.creation}</p>
@@ -72,7 +90,8 @@ function updateCountdown() {
             <p><strong>Récord de vuelta:</strong> ${circuit.details.lapRecord}</p>
           `;
           document.getElementById('circuit-details').innerHTML = detailsHtml;
-          // Historial de ganadores y polemans
+
+          // Mostrar historial de ganadores y polemans
           let historyHtml = '<table><tr><th>Año</th><th>Ganador</th><th>Pole</th></tr>';
           for (let entry of circuit.history) {
             historyHtml += `<tr>
@@ -84,14 +103,18 @@ function updateCountdown() {
           historyHtml += '</table>';
           document.getElementById('race-history').innerHTML = historyHtml;
         } else {
+          // Si no hay datos del circuito, mostrar mensaje
           document.getElementById('circuit-image').src = '';
+          document.getElementById('circuit-image').alt = 'Imagen no disponible';
           document.getElementById('circuit-details').innerHTML = '<p>Datos del circuito no disponibles.</p>';
           document.getElementById('race-history').innerHTML = '<p>Historial no disponible.</p>';
         }
       } else {
+        // Si no hay próxima carrera
         document.getElementById('countdown').innerText = 'No hay carreras programadas.';
         document.getElementById('race-name').innerText = '';
         document.getElementById('circuit-image').src = '';
+        document.getElementById('circuit-image').alt = '';
         document.getElementById('circuit-details').innerHTML = '';
         document.getElementById('race-history').innerHTML = '';
       }
@@ -101,23 +124,26 @@ function updateCountdown() {
       document.getElementById('countdown').innerText = 'Error al cargar el temporizador.';
       document.getElementById('race-name').innerText = '';
       document.getElementById('circuit-image').src = '';
+      document.getElementById('circuit-image').alt = '';
       document.getElementById('circuit-details').innerHTML = '';
       document.getElementById('race-history').innerHTML = '';
     });
 }
-setInterval(updateCountdown, 60000);
 
-// Dentro de updateCountdown, donde se actualiza la imagen
-if (circuitData[nextRace.raceName]) {
-  const circuit = circuitData[nextRace.raceName];
+// Interactividad: Ampliar imagen al hacer clic
+document.addEventListener('DOMContentLoaded', () => {
   const imgElement = document.getElementById('circuit-image');
-  imgElement.src = circuit.image;
-  imgElement.onerror = () => {
-    console.error('Error al cargar la imagen del circuito:', circuit.image);
-    imgElement.src = ''; // Limpiar si falla
-    imgElement.alt = 'Imagen no disponible';
-  };
-  // Resto del código para detalles e historial...
-}
+  if (imgElement) {
+    imgElement.addEventListener('click', () => {
+      if (imgElement.style.maxWidth === '100%' || !imgElement.style.maxWidth) {
+        imgElement.style.maxWidth = '1000px'; // Ampliar
+      } else {
+        imgElement.style.maxWidth = '100%'; // Volver al tamaño normal
+      }
+    });
+  }
+});
 
+// Ejecutar la función cada minuto y al cargar la página
+setInterval(updateCountdown, 60000);
 updateCountdown();
