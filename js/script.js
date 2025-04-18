@@ -1,5 +1,5 @@
 function updateCountdown() {
-  fetch('http://ergast.com/api/f1/current.json')
+  fetch('https://ergast.com/api/f1/current.json')
     .then(response => response.json())
     .then(data => {
       const races = data.MRData.RaceTable.Races;
