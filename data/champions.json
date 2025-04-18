@@ -1,80 +1,80 @@
 [
   {
-    "Year": 1950,
-    "Driver": "Guiseppe Farina",
-    "Country": "Italy",
-    "Constructor": "Alfa Romeo",
-    "Points": 30
+    "year": 1950,
+    "driver": "Guiseppe Farina",
+    "nationality": "Italy",
+    "team": "Alfa Romeo",
+    "points": 30
   },
   {
-    "Year": 1951,
-    "Driver": "Juan Manuel Fangio",
-    "Country": "Argentina",
-    "Constructor": "Alfa Romeo",
-    "Points": 31
+    "year": 1951,
+    "driver": "Juan Manuel Fangio",
+    "nationality": "Argentina",
+    "team": "Alfa Romeo",
+    "points": 31
   },
   {
-    "Year": 1952,
-    "Driver": "Alberto Ascari",
-    "Country": "Italy",
-    "Constructor": "Ferrari",
-    "Points": 36
+    "year": 1952,
+    "driver": "Alberto Ascari",
+    "nationality": "Italy",
+    "tea,": "Ferrari",
+    "points": 36
   },
   {
-    "Year": 1953,
-    "Driver": "Alberto Ascari",
-    "Country": "Italy",
-    "Constructor": "Ferrari",
-    "Points": 34.5
+    "year": 1953,
+    "driver": "Alberto Ascari",
+    "nationality": "Italy",
+    "team": "Ferrari",
+    "points": 34.5
   },
   {
-    "Year": 1954,
-    "Driver": "Juan Manuel Fangio",
-    "Country": "Argentina",
-    "Constructor": "MaseratiMercedes",
-    "Points": 42
+    "year": 1954,
+    "driver": "Juan Manuel Fangio",
+    "nationality": "Argentina",
+    "team": "MaseratiMercedes",
+    "points": 42
   },
   {
-    "Year": 1955,
-    "Driver": "Juan Manuel Fangio",
-    "Country": "Argentina",
-    "Constructor": "Mercedes",
-    "Points": 40
+    "year": 1955,
+    "driver": "Juan Manuel Fangio",
+    "nationality": "Argentina",
+    "team": "Mercedes",
+    "points": 40
   },
   {
-    "Year": 1956,
-    "Driver": "Juan Manuel Fangio",
-    "Country": "Argentina",
-    "Constructor": "Ferrari",
-    "Points": 40
+    "year": 1956,
+    "driver": "Juan Manuel Fangio",
+    "nationality": "Argentina",
+    "team": "Ferrari",
+    "points": 40
   },
   {
-    "Year": 1957,
-    "Driver": "Juan Manuel Fangio",
-    "Country": "Argentina",
-    "Constructor": "Maserati",
-    "Points": 40
+    "year": 1957,
+    "driver": "Juan Manuel Fangio",
+    "nationality": "Argentina",
+    "team": "Maserati",
+    "points": 40
   },
   {
-    "Year": 1958,
-    "Driver": "Mike Hawthorn",
-    "Country": "UK",
-    "Constructor": "Ferrari",
-    "Points": 42
+    "year": 1958,
+    "driver": "Mike Hawthorn",
+    "nationality": "UK",
+    "team": "Ferrari",
+    "points": 42
   },
   {
-    "Year": 1959,
-    "Driver": "Jack Brabham",
-    "Country": "Australia",
-    "Constructor": "Cooper",
-    "Points": 31
+    "year": 1959,
+    "driver": "Jack Brabham",
+    "nationality": "Australia",
+    "team": "Cooper",
+    "points": 31
   },
   {
-    "Year": 1960,
-    "Driver": "Jack Brabham",
-    "Country": "australia",
-    "Constructor": "Cooper",
-    "Points": 43
+    "year": 1960,
+    "driver": "Jack Brabham",
+    "nationality": "australia",
+    "team": "Cooper",
+    "points": 43
   },
   {
     "Year": 1961,
