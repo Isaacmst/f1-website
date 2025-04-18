@@ -1,8 +1,527 @@
 [
-    {"year": 2023, "driver": "Max Verstappen", "team": "Red Bull"},
-    {"year": 2022, "driver": "Max Verstappen", "team": "Red Bull"},
-    {"year": 2021, "driver": "Max Verstappen", "team": "Red Bull"},
-    {"year": 2020, "driver": "Lewis Hamilton", "team": "Mercedes Benz"},
-    {"year": 2019, "driver": "Lewiz Hamilton", "team": "Mercedes Benz"}
-    
-  ]
+  {
+    "Year": 1950,
+    "Driver": "Guiseppe Farina",
+    "Country": "Italy",
+    "Constructor": "Alfa Romeo",
+    "Points": 30
+  },
+  {
+    "Year": 1951,
+    "Driver": "Juan Manuel Fangio",
+    "Country": "Argentina",
+    "Constructor": "Alfa Romeo",
+    "Points": 31
+  },
+  {
+    "Year": 1952,
+    "Driver": "Alberto Ascari",
+    "Country": "Italy",
+    "Constructor": "Ferrari",
+    "Points": 36
+  },
+  {
+    "Year": 1953,
+    "Driver": "Alberto Ascari",
+    "Country": "Italy",
+    "Constructor": "Ferrari",
+    "Points": 34.5
+  },
+  {
+    "Year": 1954,
+    "Driver": "Juan Manuel Fangio",
+    "Country": "Argentina",
+    "Constructor": "MaseratiMercedes",
+    "Points": 42
+  },
+  {
+    "Year": 1955,
+    "Driver": "Juan Manuel Fangio",
+    "Country": "Argentina",
+    "Constructor": "Mercedes",
+    "Points": 40
+  },
+  {
+    "Year": 1956,
+    "Driver": "Juan Manuel Fangio",
+    "Country": "Argentina",
+    "Constructor": "Ferrari",
+    "Points": 40
+  },
+  {
+    "Year": 1957,
+    "Driver": "Juan Manuel Fangio",
+    "Country": "Argentina",
+    "Constructor": "Maserati",
+    "Points": 40
+  },
+  {
+    "Year": 1958,
+    "Driver": "Mike Hawthorn",
+    "Country": "UK",
+    "Constructor": "Ferrari",
+    "Points": 42
+  },
+  {
+    "Year": 1959,
+    "Driver": "Jack Brabham",
+    "Country": "Australia",
+    "Constructor": "Cooper",
+    "Points": 31
+  },
+  {
+    "Year": 1960,
+    "Driver": "Jack Brabham",
+    "Country": "australia",
+    "Constructor": "Cooper",
+    "Points": 43
+  },
+  {
+    "Year": 1961,
+    "Driver": "Pill Hill",
+    "Country": "UK",
+    "Constructor": "Ferrari",
+    "Points": 34
+  },
+  {
+    "Year": 1962,
+    "Driver": "Graham Hill",
+    "Country": "UK",
+    "Constructor": "BRM",
+    "Points": 42
+  },
+  {
+    "Year": 1963,
+    "Driver": "Jim Clark",
+    "Country": "UK",
+    "Constructor": "Lotus",
+    "Points": 54
+  },
+  {
+    "Year": 1964,
+    "Driver": "John Surtees",
+    "Country": "UK",
+    "Constructor": "Ferrari",
+    "Points": 40
+  },
+  {
+    "Year": 1965,
+    "Driver": "Jim Clark",
+    "Country": "UK",
+    "Constructor": "Lotus",
+    "Points": 54
+  },
+  {
+    "Year": 1966,
+    "Driver": "Jack Brabham",
+    "Country": "Australia",
+    "Constructor": "Brabham",
+    "Points": 42
+  },
+  {
+    "Year": 1967,
+    "Driver": "Denny Hulme",
+    "Country": "New Zeland",
+    "Constructor": "Brabham",
+    "Points": 51
+  },
+  {
+    "Year": 1968,
+    "Driver": "Graham Hill",
+    "Country": "UK",
+    "Constructor": "Lotus",
+    "Points": 48
+  },
+  {
+    "Year": 1969,
+    "Driver": "Jackie stewart",
+    "Country": "UK",
+    "Constructor": "Matra",
+    "Points": 63
+  },
+  {
+    "Year": 1970,
+    "Driver": "Jochen Rindt",
+    "Country": "Austria",
+    "Constructor": "Lotus",
+    "Points": 45
+  },
+  {
+    "Year": 1971,
+    "Driver": "Jackie stewart",
+    "Country": "UK",
+    "Constructor": "Tyrell",
+    "Points": 62
+  },
+  {
+    "Year": 1972,
+    "Driver": "Emerson Fittipaldi",
+    "Country": "Brasil",
+    "Constructor": "Lotus",
+    "Points": 61
+  },
+  {
+    "Year": 1973,
+    "Driver": "Jackie stewart",
+    "Country": "UK",
+    "Constructor": "Tyrell",
+    "Points": 71
+  },
+  {
+    "Year": 1974,
+    "Driver": "Emerson Fittipaldi",
+    "Country": "Brasil",
+    "Constructor": "Mclaren",
+    "Points": 55
+  },
+  {
+    "Year": 1975,
+    "Driver": "Niki Lauda",
+    "Country": "Austria",
+    "Constructor": "Ferrari",
+    "Points": 64.5
+  },
+  {
+    "Year": 1976,
+    "Driver": "James Hunt",
+    "Country": "UK",
+    "Constructor": "Mclaren",
+    "Points": 69
+  },
+  {
+    "Year": 1977,
+    "Driver": "Niki Lauda",
+    "Country": "Austria",
+    "Constructor": "Ferrari",
+    "Points": 72
+  },
+  {
+    "Year": 1978,
+    "Driver": "Mario Andretti",
+    "Country": "USA",
+    "Constructor": "Lotus",
+    "Points": 64
+  },
+  {
+    "Year": 1979,
+    "Driver": "Jody Schekter",
+    "Country": "South Africa",
+    "Constructor": "Ferrari",
+    "Points": 51
+  },
+  {
+    "Year": 1980,
+    "Driver": "Alan Jones",
+    "Country": "New Zeland",
+    "Constructor": "Williams",
+    "Points": 67
+  },
+  {
+    "Year": 1981,
+    "Driver": "Nelson Piquet",
+    "Country": "Brasil",
+    "Constructor": "Brabham",
+    "Points": 50
+  },
+  {
+    "Year": 1982,
+    "Driver": "Keke Rosberg",
+    "Country": "Finland",
+    "Constructor": "Williams",
+    "Points": 44
+  },
+  {
+    "Year": 1983,
+    "Driver": "Nelson Piquet",
+    "Country": "Brasil",
+    "Constructor": "Brabham",
+    "Points": 59
+  },
+  {
+    "Year": 1984,
+    "Driver": "Niki Lauda",
+    "Country": "Austria",
+    "Constructor": "Mclaren",
+    "Points": 72
+  },
+  {
+    "Year": 1985,
+    "Driver": "Alain Prost",
+    "Country": "France",
+    "Constructor": "Mclaren",
+    "Points": 73
+  },
+  {
+    "Year": 1986,
+    "Driver": "Alain Prost",
+    "Country": "France",
+    "Constructor": "Mclaren",
+    "Points": 72
+  },
+  {
+    "Year": 1987,
+    "Driver": "Nelson Piquet",
+    "Country": "Brasil",
+    "Constructor": "Williams",
+    "Points": 73
+  },
+  {
+    "Year": 1988,
+    "Driver": "Ayrton Senna",
+    "Country": "Brasil",
+    "Constructor": "Williams",
+    "Points": 90
+  },
+  {
+    "Year": 1989,
+    "Driver": "Alain Prost",
+    "Country": "France",
+    "Constructor": "Mclaren",
+    "Points": 76
+  },
+  {
+    "Year": 1990,
+    "Driver": "Ayrton Senna",
+    "Country": "Brasil",
+    "Constructor": "Mclaren",
+    "Points": 78
+  },
+  {
+    "Year": 1991,
+    "Driver": "Ayrton Senna",
+    "Country": "Brasil",
+    "Constructor": "Mclaren",
+    "Points": 96
+  },
+  {
+    "Year": 1992,
+    "Driver": "Nigel Mansell",
+    "Country": "UK",
+    "Constructor": "Williams",
+    "Points": 108
+  },
+  {
+    "Year": 1993,
+    "Driver": "Alain Prost",
+    "Country": "France",
+    "Constructor": "Williams",
+    "Points": 99
+  },
+  {
+    "Year": 1994,
+    "Driver": "Michael Schumacher",
+    "Country": "Germany",
+    "Constructor": "Benetton",
+    "Points": 92
+  },
+  {
+    "Year": 1995,
+    "Driver": "Michael Schumacher",
+    "Country": "Germany",
+    "Constructor": "Benetton",
+    "Points": 102
+  },
+  {
+    "Year": 1996,
+    "Driver": "Damon Hill",
+    "Country": "UK",
+    "Constructor": "Williams",
+    "Points": 97
+  },
+  {
+    "Year": 1997,
+    "Driver": "Jacques Villeneuve",
+    "Country": "Canad�",
+    "Constructor": "Williams",
+    "Points": 81
+  },
+  {
+    "Year": 1998,
+    "Driver": "Mika Hakkinen",
+    "Country": "Finland",
+    "Constructor": "Mclaren",
+    "Points": 100
+  },
+  {
+    "Year": 1999,
+    "Driver": "Mika Hakkinen",
+    "Country": "Finland",
+    "Constructor": "Mclaren",
+    "Points": 76
+  },
+  {
+    "Year": 2000,
+    "Driver": "Michael Schumacher",
+    "Country": "Germany",
+    "Constructor": "Ferrari",
+    "Points": 108
+  },
+  {
+    "Year": 2001,
+    "Driver": "Michael Schumacher",
+    "Country": "Germany",
+    "Constructor": "Ferrari",
+    "Points": 123
+  },
+  {
+    "Year": 2002,
+    "Driver": "Michael Schumacher",
+    "Country": "Germany",
+    "Constructor": "Ferrari",
+    "Points": 144
+  },
+  {
+    "Year": 2003,
+    "Driver": "Michael Schumacher",
+    "Country": "Germany",
+    "Constructor": "Ferrari",
+    "Points": 93
+  },
+  {
+    "Year": 2004,
+    "Driver": "Michael Schumacher",
+    "Country": "Germany",
+    "Constructor": "Ferrari",
+    "Points": 148
+  },
+  {
+    "Year": 2005,
+    "Driver": "Fernando Alonso",
+    "Country": "Spain",
+    "Constructor": "Renault",
+    "Points": 133
+  },
+  {
+    "Year": 2006,
+    "Driver": "Fernando Alonso",
+    "Country": "Spain",
+    "Constructor": "Renault",
+    "Points": 134
+  },
+  {
+    "Year": 2007,
+    "Driver": "Kimi Raikkonen",
+    "Country": "Finland",
+    "Constructor": "Ferrari",
+    "Points": 110
+  },
+  {
+    "Year": 2008,
+    "Driver": "Lewis Hamilton",
+    "Country": "UK",
+    "Constructor": "Mclaren",
+    "Points": 98
+  },
+  {
+    "Year": 2009,
+    "Driver": "Jenson Button",
+    "Country": "UK",
+    "Constructor": "Brawn",
+    "Points": 95
+  },
+  {
+    "Year": 2010,
+    "Driver": "Sebastian Vettel",
+    "Country": "Germany",
+    "Constructor": "Redbull",
+    "Points": 256
+  },
+  {
+    "Year": 2011,
+    "Driver": "Sebastian Vettel",
+    "Country": "Germany",
+    "Constructor": "Redbull",
+    "Points": 392
+  },
+  {
+    "Year": 2012,
+    "Driver": "Sebastian Vettel",
+    "Country": "Germany",
+    "Constructor": "Redbull",
+    "Points": 281
+  },
+  {
+    "Year": 2013,
+    "Driver": "Sebastian Vettel",
+    "Country": "Germany",
+    "Constructor": "Redbull",
+    "Points": 396
+  },
+  {
+    "Year": 2014,
+    "Driver": "Lewis Hamilton",
+    "Country": "UK",
+    "Constructor": "Mercedes",
+    "Points": 384
+  },
+  {
+    "Year": 2015,
+    "Driver": "Lewis Hamilton",
+    "Country": "UK",
+    "Constructor": "Mercedes",
+    "Points": 381
+  },
+  {
+    "Year": 2016,
+    "Driver": "Nico Rosberg",
+    "Country": "Germany",
+    "Constructor": "Mercedes",
+    "Points": 385
+  },
+  {
+    "Year": 2017,
+    "Driver": "Lewis Hamilton",
+    "Country": "UK",
+    "Constructor": "Mercedes",
+    "Points": 363
+  },
+  {
+    "Year": 2018,
+    "Driver": "Lewis Hamilton",
+    "Country": "UK",
+    "Constructor": "Mercedes",
+    "Points": 408
+  },
+  {
+    "Year": 2019,
+    "Driver": "Lewis Hamilton",
+    "Country": "UK",
+    "Constructor": "Mercedes",
+    "Points": 381
+  },
+  {
+    "Year": 2020,
+    "Driver": "Lewis Hamilton",
+    "Country": "UK",
+    "Constructor": "Mercedes",
+    "Points": 347
+  },
+  {
+    "Year": 2021,
+    "Driver": "Max Verstappen",
+    "Country": "Netherlands",
+    "Constructor": "Redbull",
+    "Points": 395.5
+  },
+  {
+    "Year": 2022,
+    "Driver": "Max Verstappen",
+    "Country": "Netherlands",
+    "Constructor": "Redbull",
+    "Points": 454
+  },
+  {
+    "Year": 2023,
+    "Driver": "Max Verstappen",
+    "Country": "Netherlands",
+    "Constructor": "Redbull",
+    "Points": 575
+  },
+  {
+    "Year": 2024,
+    "Driver": "Max Verstappen",
+    "Country": "Netherlands",
+    "Constructor": "Redbull",
+    "Points": 437
+  }
+]
