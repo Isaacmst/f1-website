@@ -1,4 +1,4 @@
-fetch('http://ergast.com/api/f1/current/driverStandings.json')
+fetch('https://ergast.com/api/f1/current/driverStandings.json')
   .then(response => response.json())
   .then(data => {
     const standings = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
