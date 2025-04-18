@@ -103,3 +103,7 @@ th {
 #race-history th {
   background-color: #f2f2f2;
 }
+#circuit-image {
+  cursor: pointer;
+  transition: max-width 0.3s ease;
+}
