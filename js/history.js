@@ -1,14 +1,20 @@
 fetch('data/champions.json')
   .then(response => response.json())
   .then(data => {
-    let list = '<ul>';
+    let table = '<table><tr><th>Año</th><th>Piloto</th><th>Nacionalidad</th><th>Equipo</th><th>Puntos</th></tr>';
     for (let champion of data) {
-      list += `<li>${champion.year}: ${champion.driver} (${champion.team})</li>`;
+      table += `<tr>
+        <td>${champion.year}</td>
+        <td>${champion.driver}</td>
+        <td>${champion.nationality}</td>
+        <td>${champion.team}</td>
+        <td>${champion.points}</td>
+      </tr>`;
     }
-    list += '</ul>';
-    document.getElementById('champions').innerHTML = list;
+    table += '</table>';
+    document.getElementById('champions-table').innerHTML = table;
   })
   .catch(error => {
-    console.error('Error:', error);
-    document.getElementById('champions').innerHTML = 'Error al cargar los datos históricos.';
+    console.error('Error al cargar campeones:', error);
+    document.getElementById('champions-table').innerHTML = 'Error al cargar los datos de campeones.';
   });
