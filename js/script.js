@@ -1,7 +1,7 @@
 // Datos de circuitos (puedes agregar más circuitos aquí)
 const circuitData = {
   'Saudi Arabian Grand Prix': {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Jeddah_Corniche_Circuit_layout.svg/800px-Jeddah_Corniche_Circuit_layout.svg.png',
+    image: 'images/jeddah_corniche_circuit.png', // Nueva ruta
     details: {
       length: '6.174 km',
       creation: '2021',
@@ -15,6 +15,7 @@ const circuitData = {
       { year: 2024, winner: 'Max Verstappen (Red Bull)', pole: 'Max Verstappen' }
     ]
   }
+
   // Agrega más circuitos aquí, por ejemplo:
   // 'Japanese Grand Prix': { image: '...', details: {...}, history: [...] }
 };
@@ -105,4 +106,18 @@ function updateCountdown() {
     });
 }
 setInterval(updateCountdown, 60000);
+
+// Dentro de updateCountdown, donde se actualiza la imagen
+if (circuitData[nextRace.raceName]) {
+  const circuit = circuitData[nextRace.raceName];
+  const imgElement = document.getElementById('circuit-image');
+  imgElement.src = circuit.image;
+  imgElement.onerror = () => {
+    console.error('Error al cargar la imagen del circuito:', circuit.image);
+    imgElement.src = ''; // Limpiar si falla
+    imgElement.alt = 'Imagen no disponible';
+  };
+  // Resto del código para detalles e historial...
+}
+
 updateCountdown();
