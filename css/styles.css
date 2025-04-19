@@ -118,3 +118,14 @@ div#champions-table tr:hover {
 #circuit-info {
   border: 5px solid red !important;
 }
+
+/* Prueba temporal para forzar estilos */
+#circuit-info {
+  border: 5px solid red !important;
+  background-color: yellow !important;
+}
+
+#champions-table table {
+  border: 5px solid blue !important;
+  background-color: pink !important;
+}
