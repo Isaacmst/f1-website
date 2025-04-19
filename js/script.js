@@ -1,7 +1,7 @@
-/// Datos de los circuitos (agrega más circuitos aquí si quieres)
+// Datos de los circuitos
 const circuitData = {
   'Saudi Arabian Grand Prix': {
-    image: 'images/jeddah_corniche_circuit.png', // Imagen local (sube esta imagen al repositorio)
+    image: 'images/jeddah_corniche_circuit.png',
     details: {
       length: '6.174 km',
       creation: '2021',
@@ -15,11 +15,8 @@ const circuitData = {
       { year: 2024, winner: 'Max Verstappen (Red Bull)', pole: 'Max Verstappen' }
     ]
   }
-  // Puedes agregar más circuitos, por ejemplo:
-  // 'Japanese Grand Prix': { image: 'images/suzuka_circuit.png', details: {...}, history: [...] }
 };
 
-// Función para actualizar el temporizador y la sección del circuito
 function updateCountdown() {
   fetch('https://api.jolpi.ca/ergast/f1/2025.json')
     .then(response => {
@@ -29,7 +26,6 @@ function updateCountdown() {
       return response.json();
     })
     .then(data => {
-      // Validar la estructura de los datos de la API
       if (!data || !data.MRData || !data.MRData.RaceTable || !Array.isArray(data.MRData.RaceTable.Races)) {
         throw new Error('Datos de carreras no encontrados o no válidos');
       }
@@ -38,7 +34,6 @@ function updateCountdown() {
       const now = new Date();
       let nextRace = null;
 
-      // Encontrar la próxima carrera
       for (let race of races) {
         if (!race.date || !race.time) {
           console.warn('Carrera sin fecha o hora:', race);
@@ -55,9 +50,7 @@ function updateCountdown() {
         }
       }
 
-      // Actualizar el temporizador y la sección del circuito
       if (nextRace) {
-        // Calcular tiempo restante
         const raceDate = new Date(`${nextRace.date}T${nextRace.time}`);
         const diff = raceDate - now;
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -66,13 +59,11 @@ function updateCountdown() {
         document.getElementById('countdown').innerText = 
           `Faltan ${days} días, ${hours} horas y ${minutes} minutos para ${nextRace.raceName}`;
 
-        // Actualizar datos del circuito
         document.getElementById('race-name').innerText = nextRace.raceName;
 
         if (circuitData[nextRace.raceName]) {
           const circuit = circuitData[nextRace.raceName];
 
-          // Cargar la imagen del circuito
           const imgElement = document.getElementById('circuit-image');
           imgElement.src = circuit.image;
           imgElement.alt = `Mapa del circuito - ${nextRace.raceName}`;
@@ -82,7 +73,6 @@ function updateCountdown() {
             imgElement.alt = 'Imagen no disponible';
           };
 
-          // Mostrar detalles del circuito
           let detailsHtml = `
             <p><strong>Longitud:</strong> ${circuit.details.length}</p>
             <p><strong>Fecha de creación:</strong> ${circuit.details.creation}</p>
@@ -91,7 +81,6 @@ function updateCountdown() {
           `;
           document.getElementById('circuit-details').innerHTML = detailsHtml;
 
-          // Mostrar historial de ganadores y polemans
           let historyHtml = '<table><tr><th>Año</th><th>Ganador</th><th>Pole</th></tr>';
           for (let entry of circuit.history) {
             historyHtml += `<tr>
@@ -102,15 +91,16 @@ function updateCountdown() {
           }
           historyHtml += '</table>';
           document.getElementById('race-history').innerHTML = historyHtml;
+
+          // Forzar la re-renderización de los estilos
+          document.getElementById('circuit-info').classList.add('loaded');
         } else {
-          // Si no hay datos del circuito, mostrar mensaje
           document.getElementById('circuit-image').src = '';
           document.getElementById('circuit-image').alt = 'Imagen no disponible';
           document.getElementById('circuit-details').innerHTML = '<p>Datos del circuito no disponibles.</p>';
           document.getElementById('race-history').innerHTML = '<p>Historial no disponible.</p>';
         }
       } else {
-        // Si no hay próxima carrera
         document.getElementById('countdown').innerText = 'No hay carreras programadas.';
         document.getElementById('race-name').innerText = '';
         document.getElementById('circuit-image').src = '';
@@ -130,20 +120,18 @@ function updateCountdown() {
     });
 }
 
-// Interactividad: Ampliar imagen al hacer clic
 document.addEventListener('DOMContentLoaded', () => {
   const imgElement = document.getElementById('circuit-image');
   if (imgElement) {
     imgElement.addEventListener('click', () => {
       if (imgElement.style.maxWidth === '100%' || !imgElement.style.maxWidth) {
-        imgElement.style.maxWidth = '1000px'; // Ampliar
+        imgElement.style.maxWidth = '1000px';
       } else {
-        imgElement.style.maxWidth = '100%'; // Volver al tamaño normal
+        imgElement.style.maxWidth = '100%';
       }
     });
   }
 });
 
-// Ejecutar la función cada minuto y al cargar la página
 setInterval(updateCountdown, 60000);
 updateCountdown();
