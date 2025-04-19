@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Historia - F1 Website</title>
-  <!--link rel="stylesheet" href="css/styles.css" este es el codigo que estaba-->
-  <link rel="stylesheet" href="css/styles.css?v=1">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para responsividad -->
 </head>
 <body>
   <h1>Historia de la Fórmula 1</h1>
-  <!-- Contenido actual de history.html -->
-  <h2>Campeones por Piloto</h2>
-<canvas id="champions-chart" width="400" height="200"></canvas>
+  <h2>Campeones del Mundo de Pilotos (1950-2024)</h2>
   <div id="champions-table"></div>
-  <script src="js/history.js"></script>
+  <h2>Top 10 Pilotos con Más Campeonatos</h2>
+  <div style="position: relative; width: 100%; height: 400px;">
+    <canvas id="champions-chart"></canvas>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/history.js"></script>
 </body>
 </html>
