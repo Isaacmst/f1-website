@@ -137,25 +137,3 @@ div#champions-table tr:hover {
     height: 300px !important;
   }
 }
-
-/* Prueba temporal para forzar estilos */
-#circuit-info {
-  border: 5px solid red !important;
-  background-color: yellow !important;
-}
-
-#champions-table table {
-  border: 5px solid blue !important;
-  background-color: pink !important;
-}
-
-
-#circuit-info.loaded {
-  margin: 20px !important;
-  padding: 20px !important;
-  border: 1px solid #ddd !important;
-  border-radius: 5px !important;
-  background-color: #fff !important;
-  border: 5px solid red !important; /* Temporal */
-  background-color: yellow !important; /* Temporal */
-}
