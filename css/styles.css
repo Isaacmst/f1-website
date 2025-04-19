@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4 !important; /* Cambiar de lightblue a un gris claro para que sea más elegante */
 }
 
 header {
@@ -37,84 +37,80 @@ main {
 }
 
 /* Estilos para la sección del circuito en index.html */
-#circuit-info {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff;
+div#circuit-info {
+  margin: 20px !important;
+  padding: 20px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  background-color: #fff !important;
 }
 
-#circuit-info h2, #circuit-info h3 {
-  color: #333;
+div#circuit-info h2, div#circuit-info h3 {
+  color: #333 !important;
 }
 
-#circuit-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  cursor: pointer;
-  transition: max-width 0.3s ease;
+img#circuit-image {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  cursor: pointer !important;
+  transition: max-width 0.3s ease !important;
 }
 
-#circuit-details, #race-history {
-  margin-top: 10px;
+div#circuit-details, div#race-history {
+  margin-top: 10px !important;
 }
 
-#circuit-details p, #race-history table {
-  font-size: 16px;
+div#circuit-details p, div#race-history table {
+  font-size: 16px !important;
 }
 
-#race-history table {
-  width: 100%;
-  border-collapse: collapse;
+div#race-history table {
+  width: 100% !important;
+  border-collapse: collapse !important;
 }
 
-#race-history th, #race-history td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+div#race-history th, div#race-history td {
+  border: 1px solid #ddd !important;
+  padding: 8px !important;
+  text-align: left !important;
 }
 
-#race-history th {
-  background-color: #f2f2f2;
-  font-weight: bold;
+div#race-history th {
+  background-color: #f2f2f2 !important;
+  font-weight: bold !important;
 }
 
-#race-history tr:nth-child(even) {
-  background-color: #f9f9f9;
+div#race-history tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
 }
 
-#race-history tr:hover {
-  background-color: #f5f5f5;
+div#race-history tr:hover {
+  background-color: #f5f5f5 !important;
 }
 
 /* Estilos para la tabla de campeones en history.html */
-#champions-table table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+div#champions-table table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 20px 0 !important;
 }
 
-#champions-table th, #champions-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+div#champions-table th, div#champions-table td {
+  border: 1px solid #ddd !important;
+  padding: 8px !important;
+  text-align: left !important;
 }
 
-#champions-table th {
-  background-color: #f2f2f2;
-  font-weight: bold;
+div#champions-table th {
+  background-color: #f2f2f2 !important;
+  font-weight: bold !important;
 }
 
-#champions-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+div#champions-table tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
 }
 
-#champions-table tr:hover {
-  background-color: #f5f5f5;
-}
-
-body {
-  background-color: lightblue !important;
+div#champions-table tr:hover {
+  background-color: #f5f5f5 !important;
 }
